@@ -1,0 +1,19 @@
+{
+  "name": "giscus",
+  "version": "1.0.0",
+  "description": "Cloudfare worker to Cross-Origin-Resource-Policy header",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jburgy/giscus.git"
+  },
+  "author": "Jan Burgy <jburgy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jburgy/giscus/issues"
+  },
+  "homepage": "https://giscus.jburgy.workers.dev/"
+}
