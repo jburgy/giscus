@@ -9,8 +9,9 @@ addEventListener('fetch', (event) => {
  * @returns {Promise<Response>}
  */
 async function handleRequest(request) {
-    const { pathname } = new URL(request.url);
-    const response = await fetch(new URL(pathname, 'https://giscus.app'));
+    const url = new URL(request.url);
+    url.host = 'giscus.app';
+    const response = await fetch(url);
     const headers = new Headers(response.headers);
     headers.delete('Content-Security-Policy')
     headers.set('Cross-Origin-Resource-Policy', 'cross-origin');
