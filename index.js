@@ -11,7 +11,7 @@ addEventListener('fetch', (event) => {
 async function handleRequest(request) {
     const url = new URL(request.url);
     url.host = 'giscus.app';
-    const response = await fetch(url);
+    const response = await fetch(url, { method: request.method });
     const headers = new Headers(response.headers);
     headers.delete('Content-Security-Policy')
     headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
