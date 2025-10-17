@@ -14,6 +14,7 @@ async function handleRequest(request) {
     const response = await fetch(url);
     const headers = new Headers(response.headers);
     headers.delete('Content-Security-Policy')
+    headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
     headers.set('Cross-Origin-Resource-Policy', 'cross-origin');
     return new Response(response.body, {
         status: response.status,
